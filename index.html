@@ -108,5 +108,24 @@
     </p>
 </button>
 <br>
+<br>
+<!--funny secret-->
+        <p class="press-start-2p-regular" style="font-size: 25px;" id="randomText"></p>
+    
+    <script>
+        const texts = [
+            ":]",
+            ":D",
+            "XD",
+            ";P",
+            ":0"
+        ];
+        
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        const randomText = texts[randomIndex];
+        
+        document.getElementById("randomText").textContent = randomText;
+    </script>
+<br>
 </body>
 </html>
