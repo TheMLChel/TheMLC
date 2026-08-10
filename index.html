@@ -12,19 +12,29 @@
             box-sizing: border-box;
         }
 
-        html {
+        html, body {
             height: 100%;
-            background: linear-gradient(to top, #71eaff, #0066ff);
+            margin: 0;
+            padding: 0;
         }
 
         body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             min-height: 100vh;
-            text-align: center;
             overflow-x: hidden;
-            background: transparent;
+        }
+
+        /* ===== ОСНОВНАЯ ОБЁРТКА С ГРАДИЕНТОМ ===== */
+        .wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(to top, #71eaff, #0066ff);
+            /* Градиент теперь здесь */
+            min-height: 100vh;
+            width: 100%;
         }
 
         .press-start-2p-regular {
@@ -33,10 +43,11 @@
             font-style: normal;
         }
 
-        /* ===== КОНТЕЙНЕР ДЛЯ ВСЕГО КОНТЕНТА (кроме травы) ===== */
+        /* ===== КОНТЕЙНЕР ДЛЯ ВСЕГО КОНТЕНТА ===== */
         .content {
             flex: 1;
             padding: 20px 20px 0 20px;
+            text-align: center;
         }
 
         /* ===== СТИЛИ ДЛЯ КАРТИНОК-ИКОНОК В ПРОЕКТАХ ===== */
@@ -76,85 +87,91 @@
 </head>
 <body>
 
-    <!-- ===== ВЕСЬ КОНТЕНТ ОБЁРНУТ В .content ===== -->
-    <div class="content">
+    <!-- ===== ОБЩАЯ ОБЁРТКА С ГРАДИЕНТОМ ===== -->
+    <div class="wrapper">
 
-        <!-- welcome -->
-        <p class="press-start-2p-regular" style="font-size: 75px;"><b>Хомяк MrLoLchel`а</b></p>
-        <br>
-        <img src="mlc-homyak.png" width="250" height="250" style="border: 10px solid #000000;">
+        <!-- ===== ВЕСЬ КОНТЕНТ ===== -->
+        <div class="content">
 
-        <!-- info -->
-        <p class="press-start-2p-regular" style="font-size: 25px;"><b><br>Привет! Я MrLoLchel (другие псевдонимы - TheMLC, MrBruhChel, TheMBC). Люблю анимировать, делать музыку и немнооого умею программировать. Основной софт, в котором я работаю: Adobe Animate - анимация, FL Studio - музыка, DaVinci Resolve - монтаж, Krita - рисование, Blender - всякая 3D всячина.</b></p>
-        <br>
+            <!-- welcome -->
+            <p class="press-start-2p-regular" style="font-size: 75px;"><b>Хомяк MrLoLchel`а</b></p>
+            <br>
+            <img src="mlc-homyak.png" width="250" height="250" style="border: 10px solid #000000;">
 
-        <!-- projects -->
-        <br>
-        <br>
-        <p class="press-start-2p-regular" style="font-size: 50px;">Над Чем Я Работаю Сейчас:</p>
-        <p class="press-start-2p-regular" style="font-size: 25px;"><b>Том и его друг Шапка: Тем Временем...</b></p>
-        <div class="container">
-            <img src="TahfHm.png" width="200" height="200">
-            <p class="press-start-2p-regular" style="font-size: 15px;">
-                ТиедШ:тв, это анимационный сериал, являющийся небольшим ответвлением от моего другого сериала, под названием "Том и его друг Шапка". В ТиедШ:тв мы следим за 4 главными персонажами, которые исследуют свои родные края, которые сильно изменились после одного ужасного дня. В сериале будет всего 5 серий.
-            </p>
+            <!-- info -->
+            <p class="press-start-2p-regular" style="font-size: 25px;"><b><br>Привет! Я MrLoLchel (другие псевдонимы - TheMLC, MrBruhChel, TheMBC). Люблю анимировать, делать музыку и немнооого умею программировать. Основной софт, в котором я работаю: Adobe Animate - анимация, FL Studio - музыка, DaVinci Resolve - монтаж, Krita - рисование, Blender - всякая 3D всячина.</b></p>
+            <br>
+
+            <!-- projects -->
+            <br>
+            <br>
+            <p class="press-start-2p-regular" style="font-size: 50px;">Над Чем Я Работаю Сейчас:</p>
+            <p class="press-start-2p-regular" style="font-size: 25px;"><b>Том и его друг Шапка: Тем Временем...</b></p>
+            <div class="container">
+                <img src="TahfHm.png" width="200" height="200">
+                <p class="press-start-2p-regular" style="font-size: 15px;">
+                    ТиедШ:тв, это анимационный сериал, являющийся небольшим ответвлением от моего другого сериала, под названием "Том и его друг Шапка". В ТиедШ:тв мы следим за 4 главными персонажами, которые исследуют свои родные края, которые сильно изменились после одного ужасного дня. В сериале будет всего 5 серий.
+                </p>
+            </div>
+            <br>
+            <br>
+
+            <p class="press-start-2p-regular" style="font-size: 25px;"><b>Интересные Штуки</b></p>
+            <div class="container">
+                <img src="IN.png" width="200" height="200">
+                <p class="press-start-2p-regular" style="font-size: 15px;">
+                    Интересные Штуки, это анимационный сериал, в котором мы смотрим телепередачу, которую ведёт Шар Билл. В этой передаче Шар Билл рассказывает нам всякие интересные (или не очень) штуки. В сериале планируется 2 сезона с 6 сериями в каждном.
+                </p>
+            </div>
+            <br>
+            <br>
+
+            <p class="press-start-2p-regular" style="font-size: 25px;"><b>Something</b></p>
+            <div class="container">
+                <img src="something.png" width="200" height="200">
+                <p class="press-start-2p-regular" style="font-size: 15px;">
+                    Something, это мой музыкальный альбом. Ничего сильно итнересного в этом нету, но почему бы и нет. Будьте готовы к нелепым названиям у музыки в этом альбоме.
+                </p>
+            </div>
+
+            <!-- links -->
+            <p class="press-start-2p-regular" style="font-size: 75px;"><b>Мои ссылки:</b></p>
+            <br>
+
+            <button onclick="window.open('https://themlc.newgrounds.com/', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
+                <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">NewGrounds</p>
+            </button>
+            <br>
+
+            <button onclick="window.open('https://t.me/xMYXAMOPxHome', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
+                <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">Телеграм Канал</p>
+            </button>
+            <br>
+
+            <button onclick="window.open('https://www.youtube.com/@mrbruhchel', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
+                <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">YouTube</p>
+            </button>
+            <br>
+
+            <button onclick="window.open('https://www.tumblr.com/mrlolchel', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
+                <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">Tumblr</p>
+            </button>
+            <br>
+
+            <button onclick="window.open('https://www.multverse.ru/profile.php?user=TheMLC', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
+                <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">MultVerse</p>
+            </button>
+            <br>
+            <br>
+
         </div>
-        <br>
-        <br>
+        <!-- ===== КОНЕЦ .content ===== -->
 
-        <p class="press-start-2p-regular" style="font-size: 25px;"><b>Интересные Штуки</b></p>
-        <div class="container">
-            <img src="IN.png" width="200" height="200">
-            <p class="press-start-2p-regular" style="font-size: 15px;">
-                Интересные Штуки, это анимационный сериал, в котором мы смотрим телепередачу, которую ведёт Шар Билл. В этой передаче Шар Билл рассказывает нам всякие интересные (или не очень) штуки. В сериале планируется 2 сезона с 6 сериями в каждном.
-            </p>
-        </div>
-        <br>
-        <br>
-
-        <p class="press-start-2p-regular" style="font-size: 25px;"><b>Something</b></p>
-        <div class="container">
-            <img src="something.png" width="200" height="200">
-            <p class="press-start-2p-regular" style="font-size: 15px;">
-                Something, это мой музыкальный альбом. Ничего сильно итнересного в этом нету, но почему бы и нет. Будьте готовы к нелепым названиям у музыки в этом альбоме.
-            </p>
-        </div>
-
-        <!-- links -->
-        <p class="press-start-2p-regular" style="font-size: 75px;"><b>Мои ссылки:</b></p>
-        <br>
-
-        <button onclick="window.open('https://themlc.newgrounds.com/', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
-            <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">NewGrounds</p>
-        </button>
-        <br>
-
-        <button onclick="window.open('https://t.me/xMYXAMOPxHome', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
-            <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">Телеграм Канал</p>
-        </button>
-        <br>
-
-        <button onclick="window.open('https://www.youtube.com/@mrbruhchel', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
-            <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">YouTube</p>
-        </button>
-        <br>
-
-        <button onclick="window.open('https://www.tumblr.com/mrlolchel', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
-            <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">Tumblr</p>
-        </button>
-        <br>
-
-        <button onclick="window.open('https://www.multverse.ru/profile.php?user=TheMLC', '_blank')" style="background: none; border: none; cursor: pointer; padding: 0; font: inherit; text-shadow: 0px 0px 5px rgba(0,0,0,1);">
-            <p class="press-start-2p-regular" style="font-size: 40px; margin: 0; color: white;">MultVerse</p>
-        </button>
-        <br>
-        <br>
+        <!-- ===== ТРАВА В САМОМ НИЗУ ===== -->
+        <img src="grass-land.png" class="bottom-grass">
 
     </div>
-    <!-- ===== КОНЕЦ .content ===== -->
-
-    <!-- ===== ТРАВА В САМОМ НИЗУ ===== -->
-    <img src="grass-land.png" class="bottom-grass">
+    <!-- ===== КОНЕЦ .wrapper ===== -->
 
 </body>
 </html>
