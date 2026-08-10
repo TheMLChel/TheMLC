@@ -5,8 +5,22 @@
     <title>???</title>
 </head>
 <body bgcolor="black">
-    <audio controls loop>
-        <source src="deep-ocean.mp3" type="audio/mpeg">
+    <audio id="bgMusic" loop>
+    <source src="deep-ocean.mp3" type="audio/mpeg">
     </audio>
+
+    <script>
+        window.addEventListener('load', function() {
+        const audio = document.getElementById('bgMusic');
+    
+        const playPromise = audio.play();
+    
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+            console.log('attempt to block the inevitable');
+            });
+        }
+    });
+    </script>
 </body>
 </html>
