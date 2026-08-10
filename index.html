@@ -38,7 +38,41 @@
         text-align: left;
         margin: 0;
 
-        
+
+        /* Сбрасываем отступы у body, чтобы картинка точно прилипла к низу */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Чтобы знать, на сколько растягивать */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Раздвигает контент и картинку по краям */
+    min-height: 100vh; /* Всегда на всю высоту экрана */
+}
+
+/* Контент может занимать сколько угодно места */
+.content {
+    padding: 20px;
+    flex: 1; /* Занимает всё доступное место, прижимая картинку вниз */
+}
+
+/* Наша картинка */
+.bottom-grass {
+    display: block; /* Убирает лишний отступ снизу (пробел для букв) */
+    width: 100%;    /* Растягиваем на всю ширину */
+    height: 200px;  /* ФИКСИРОВАННАЯ ВЫСОТА (пишите свою, например 150px) */
+    object-fit: fill; /* Принудительно растягиваем до краёв (возможно искажение) */
+    /* Альтернатива: если хотите, чтобы не искажалась, но заполняла — 
+       используйте object-fit: cover; (но тогда высота может чуть меняться) */
+    flex-shrink: 0; /* Запрещаем сжиматься по высоте */
+}
     </style>
 </head>
 <body>
@@ -161,6 +195,6 @@
     </p>
 </button>
 <br>
-    <img src="grass-land.png" class="grass">
+    <img src="grass-land.png" class="bottom-grass">
 </body>
 </html>
