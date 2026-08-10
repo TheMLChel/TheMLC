@@ -6,21 +6,13 @@
 </head>
 <body bgcolor="black">
     <audio id="bgMusic" loop>
-    <source src="deep-ocean.mp3" type="audio/mpeg">
+        <source src="ваш-файл.mp3" type="audio/mpeg">
     </audio>
-
     <script>
-        window.addEventListener('load', function() {
-        const audio = document.getElementById('bgMusic');
-    
-        const playPromise = audio.play();
-    
-        if (playPromise !== undefined) {
-            playPromise.catch(() => {
-            console.log('attempt to block the inevitable');
-            });
-        }
-    });
-    </script>
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+     </script>
 </body>
 </html>
