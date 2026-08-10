@@ -12,18 +12,19 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html {
             height: 100%;
+            background: linear-gradient(to top, #71eaff, #0066ff);
         }
 
         body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Контент сверху, трава внизу */
+            justify-content: space-between;
             min-height: 100vh;
-            background: linear-gradient(to top, #71eaff, #0066ff);
             text-align: center;
-            overflow-x: hidden; /* ← Главный фикс! Не даёт горизонтальному скроллу появляться */
+            overflow-x: hidden;
+            background: transparent;
         }
 
         .press-start-2p-regular {
@@ -34,7 +35,7 @@
 
         /* ===== КОНТЕЙНЕР ДЛЯ ВСЕГО КОНТЕНТА (кроме травы) ===== */
         .content {
-            flex: 1; /* Занимает всё свободное место, прижимая траву вниз */
+            flex: 1;
             padding: 20px 20px 0 20px;
         }
 
@@ -63,13 +64,12 @@
         /* ===== ТРАВА ВНИЗУ ===== */
         .bottom-grass {
             display: block;
-            width: 100vw;           /* 100% ширины окна */
-            height: 200px;          /* Фиксированная высота — меняйте под себя */
-            object-fit: fill;       /* Растягиваем без обрезки */
-            flex-shrink: 0;         /* Не даём сжиматься */
+            width: 100vw;
+            height: 200px;
+            object-fit: fill;
+            flex-shrink: 0;
             margin: 0;
             padding: 0;
-            /* Убираем возможный отступ снизу */
             vertical-align: bottom;
         }
     </style>
