@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>TheMLC`s Home Page</title>
     <style>
-        /* ===== ГЛОБАЛЬНЫЙ СБРОС ===== */
+        /* ===== СБРОС ===== */
         * {
             margin: 0;
             padding: 0;
@@ -14,26 +14,20 @@
 
         html, body {
             height: 100%;
-            margin: 0;
-            padding: 0;
         }
 
         body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
             overflow-x: hidden;
         }
 
-        /* ===== ОСНОВНАЯ ОБЁРТКА С ГРАДИЕНТОМ ===== */
+        /* ===== ГЛАВНЫЙ КОНТЕЙНЕР С ГРАДИЕНТОМ ===== */
         .wrapper {
+            min-height: 100vh;           /* Минимум на всю высоту экрана */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 100%;
-            min-height: 100vh; /* Минимум на всю высоту экрана */
             background: linear-gradient(to top, #71eaff, #0066ff);
-            /* Без fixed — градиент привязан к контенту */
+            /* Градиент от верха до низа .wrapper */
         }
 
         .press-start-2p-regular {
@@ -42,14 +36,14 @@
             font-style: normal;
         }
 
-        /* ===== КОНТЕЙНЕР ДЛЯ ВСЕГО КОНТЕНТА ===== */
+        /* ===== КОНТЕНТ ===== */
         .content {
             flex: 1;
             padding: 20px 20px 0 20px;
             text-align: center;
         }
 
-        /* ===== СТИЛИ ДЛЯ КАРТИНОК-ИКОНОК В ПРОЕКТАХ ===== */
+        /* ===== КОНТЕЙНЕР ДЛЯ ПРОЕКТОВ ===== */
         .container {
             display: flex;
             align-items: center;
@@ -71,10 +65,10 @@
             margin: 0;
         }
 
-        /* ===== ТРАВА ВНИЗУ ===== */
+        /* ===== ТРАВА ===== */
         .bottom-grass {
             display: block;
-            width: 100vw;
+            width: 100%;
             height: 200px;
             object-fit: fill;
             flex-shrink: 0;
@@ -86,10 +80,8 @@
 </head>
 <body>
 
-    <!-- ===== ОБЩАЯ ОБЁРТКА С ГРАДИЕНТОМ ===== -->
     <div class="wrapper">
 
-        <!-- ===== ВЕСЬ КОНТЕНТ ===== -->
         <div class="content">
 
             <!-- welcome -->
@@ -164,13 +156,10 @@
             <br>
 
         </div>
-        <!-- ===== КОНЕЦ .content ===== -->
 
-        <!-- ===== ТРАВА В САМОМ НИЗУ ===== -->
         <img src="grass-land.png" class="bottom-grass">
 
     </div>
-    <!-- ===== КОНЕЦ .wrapper ===== -->
 
 </body>
 </html>
