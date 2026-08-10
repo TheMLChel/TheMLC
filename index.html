@@ -27,14 +27,13 @@
 
         /* ===== ОСНОВНАЯ ОБЁРТКА С ГРАДИЕНТОМ ===== */
         .wrapper {
-            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 100vh;
             width: 100%;
-            background: linear-gradient(to top, #71eaff, #0066ff) fixed;
-            /* ↑ fixed - градиент всегда на всю высоту окна */
+            min-height: 100vh; /* Минимум на всю высоту экрана */
+            background: linear-gradient(to top, #71eaff, #0066ff);
+            /* Без fixed — градиент привязан к контенту */
         }
 
         .press-start-2p-regular {
