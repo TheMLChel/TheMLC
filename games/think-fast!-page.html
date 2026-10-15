@@ -70,21 +70,7 @@
             padding: 0;
             vertical-align: bottom;
         }
-
-        .game-frame {
-            display: block;
-
-             width: 100%;
-             max-width: 1280px;
-             aspect-ratio: 16 / 9;
-
-             border: 10px solid #000;
-
-             box-sizing: border-box;
-
-             flex: 0 0 auto;
-             transform: none;
-}
+        
     </style>
 </head>
 <body>
@@ -111,13 +97,15 @@
             <br>
             <!-- iframe -->
             <iframe
-                class="game-frame"
                 src="think-fast!.html"
+                width="1280"
+                height="720"
                 title="Think Fast!"
-                loading="lazy"
+                loading="loading"
                 sandbox="allow-scripts allow-forms"
                 allow="fullscreen; geolocation"
                 referrerpolicy="no-referrer"
+                style="border: 10px solid #000000;"
             ></iframe>
             <br>
             <br>
